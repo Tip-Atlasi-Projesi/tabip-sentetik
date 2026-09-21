@@ -5,7 +5,7 @@
 [![Lisans: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Format: Parquet](https://img.shields.io/badge/Format-Parquet-orange.svg)](https://parquet.apache.org/)
-[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Datasets-yellow.svg)](https://huggingface.co/)
+[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-Datasets-yellow.svg)](https://huggingface.co/datasets/peyxw/tabip-sentetik)
 [![Durum: Ön Sürüm](https://img.shields.io/badge/Status-Alpha%20%2F%20Preview-orange.svg)](#-gelecek-planları--yol-haritası)
 
 ---
@@ -50,21 +50,22 @@ Parquet formatındaki devasa veri setlerimizi **Hugging Face Datasets** üzerind
 from datasets import load_dataset
 
 # Hugging Face üzerinden veri setini yükleme
-# (kullanici_adinizi kendi Hugging Face kullanıcı adınızla değiştirmelisiniz)
-dataset = load_dataset("kullanici_adin/tabip-sentetik")
+dataset = load_dataset("peyxw/tabip-sentetik")
 
 ```
 
-Alternatif olarak, Pandas kütüphanesiyle doğrudan URL üzerinden de okuma yapabilirsiniz:
+Alternatif olarak, Pandas kütüphanesiyle doğrudan Hugging Face bağlantısı üzerinden de tablo okuması yapabilirsiniz:
 
 ```python
 import pandas as pd
 
 # Örnek: Demografik verileri çekme
-df_kisiler = pd.read_parquet("[https://huggingface.co/datasets/kullanici_adin/tabip-sentetik/resolve/main/kisiler.parquet](https://huggingface.co/datasets/kullanici_adin/tabip-sentetik/resolve/main/kisiler.parquet)")
+df_kisiler = pd.read_parquet("[https://huggingface.co/datasets/peyxw/tabip-sentetik/resolve/main/kisiler.parquet](https://huggingface.co/datasets/peyxw/tabip-sentetik/resolve/main/kisiler.parquet)")
 print(df_kisiler.head())
 
 ```
+
+👉 **Veri Seti Sayfası:** [Hugging Face - Tabip Sentetik](https://huggingface.co/datasets/peyxw/tabip-sentetik?utm_source=gemini)
 
 ---
 
